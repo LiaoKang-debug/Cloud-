@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="bg_white">#ffffff</color>
+    <color name="font_write">#ffffff</color>
+    <color name="font_black">#000000</color>
+    <color name="bg_light_black"> #41404A</color>
+    <color name="tab_pressed_color">#FFDAB9</color>
+    <color name="light_green">#37a8ee</color><!--46dcc9-->
+    <color name="light_gray">#ededed</color>
+    <color name="red">#ff0000</color>
+    <color name="year_color">#707070</color>
+    <color name="noral_color">#a1a1a1</color>
+    <color name="bg_gray">#FCFCFC</color>#f4f2f2
+    <color name="dark_red_color">#e1452f</color>
+    <color name="red_color">#f00</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <!-- 字体灰色-->
+    <color name="font_gray">#b8b8bc</color>
+    <color name="dark_grey">#B8B8B8</color>
+    <color name="translucent">#cc808080</color>
+    <color name="light_blue">#8fb0ea</color>
+
+    <color name="test">#404040</color>
+    <color name="year">#cdcecd</color>
 </resources>
