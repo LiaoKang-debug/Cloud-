@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    >
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/ll_mess"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_mess"
+                android:layout_width="23dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/message_before"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/tv_mess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="消息"
+                android:textColor="#000"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_work"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_work"
+                android:layout_width="23dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/work_before"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/tv_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="日程"
+                android:textColor="#000"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_app"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_app"
+            android:layout_width="23dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:src="@drawable/app_after"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="应用"
+            android:textColor="#000"
+            android:textSize="13sp" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_circle"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_circle"
+            android:layout_width="23dp"
+            android:layout_height="26dp"
+            android:src="@drawable/book_before"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="动态"
+            android:textColor="#000"
+            android:textSize="13sp" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_user"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_user"
+                android:layout_width="17dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/user_before"
+                android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="我"
+            android:textColor="#000"
+            android:textSize="13sp" />
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
