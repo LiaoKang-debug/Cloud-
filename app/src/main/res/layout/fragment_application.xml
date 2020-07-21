@@ -7,18 +7,33 @@
     <com.inspur.cloud.entity.Title
         android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="30dp">
 
     </com.inspur.cloud.entity.Title>
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/search" />
+
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
-        android:layout_below="@+id/title"
+        android:layout_below="@+id/search"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
+        android:layout_height="match_parent"
+        >
+
+        <ListView
+            android:id="@+id/list_item"
+            android:scrollbars="none"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="应用碎片" />
+            android:layout_height="match_parent">
+
+        </ListView>
     </RelativeLayout>
 
 
