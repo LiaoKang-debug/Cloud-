@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#ffffff</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="before">#FF979EA3</color>
+    <color name="after">#FF36A5F6</color>
+
     <color name="bg_white">#ffffff</color>
     <color name="font_write">#ffffff</color>
     <color name="font_black">#000000</color>

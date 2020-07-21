@@ -6,12 +6,15 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.inspur.cloud.R;
 
 import java.util.HashMap;
+import java.util.Objects;
 
-public class FwDiscussGridAdapter extends BaseAdapter {
+
+public class FwDiscussGridAdapter extends BaseAdapter implements View.OnClickListener {
     Context context;
     HashMap<Integer, Application> map;
 
@@ -51,8 +54,21 @@ public class FwDiscussGridAdapter extends BaseAdapter {
         }
 
         holder.gridimg.setImageResource(map.get(position).getImg_id());
+        holder.gridimg.setOnClickListener(this);
+        holder.gridimg.setTag(position);
         holder.gridText.setText(map.get(position).getName());
         return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        int posi;
+        posi = (Integer) v.getTag();
+        switch (v.getId()){
+            case R.id.dis_grid_img:
+                Toast.makeText(context, map.get(posi).getName(),Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 
     class ViewHolder {

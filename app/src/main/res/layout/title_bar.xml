@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:gravity="left"
         android:textSize="22dp"
-        android:textColor="#444444"
+        android:textColor="#FF333333"
         android:layout_marginLeft="15dp"
         />
     <ImageView

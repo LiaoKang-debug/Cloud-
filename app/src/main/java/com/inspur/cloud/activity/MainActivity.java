@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         selectTab(i);
     }
     public void selectTab(int i){
+        resetColor();
         switch (i){
             case MESSAGE_FRAGMENT:
                 transaction = fragmentManager.beginTransaction();
@@ -108,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 fragments.add(tab_message);
                 transaction.commit();
+                tv_msg.setTextColor(getResources().getColor(R.color.after));
                 break;
             case WORK_FRAGMENT:
                 transaction = fragmentManager.beginTransaction();
@@ -119,6 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 fragments.add(tab_work);
                 transaction.commit();
+                tv_work.setTextColor(getResources().getColor(R.color.after));
                 break;
             case APPLICATION_FRAGMENT:
                 transaction = fragmentManager.beginTransaction();
@@ -130,6 +133,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 fragments.add(tab_application);
                 transaction.commit();
+                img_app.setImageResource(R.drawable.app_after);
+                tv_app.setTextColor(getResources().getColor(R.color.after));
                 break;
             case CIRCLE_FRAGMENT:
                 transaction = fragmentManager.beginTransaction();
@@ -141,6 +146,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 fragments.add(tab_circle);
                 transaction.commit();
+                tv_circle.setTextColor(getResources().getColor(R.color.after));
                 break;
             case USER_FRAGMENT:
                 transaction = fragmentManager.beginTransaction();
@@ -152,8 +158,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 fragments.add(tab_user);
                 transaction.commit();
+                tv_user.setTextColor(getResources().getColor(R.color.after));
                 break;
         }
+    }
+    public void resetColor(){
+        img_app.setImageResource(R.drawable.app_before);
+
+        tv_msg.setTextColor(getResources().getColor(R.color.before));
+        tv_work.setTextColor(getResources().getColor(R.color.before));
+        tv_app.setTextColor(getResources().getColor(R.color.before));
+        tv_circle.setTextColor(getResources().getColor(R.color.before));
+        tv_user.setTextColor(getResources().getColor(R.color.before));
     }
     @Override
     public void onClick(View v) {
