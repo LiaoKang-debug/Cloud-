@@ -1,6 +1,7 @@
 package com.inspur.cloud.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.inspur.cloud.R;
+import com.inspur.cloud.activity.AppListActivity;
+import com.inspur.cloud.activity.SearchActivity;
 import com.inspur.cloud.entity.Application;
 import com.inspur.cloud.entity.FWDiscussAdapter;
 import com.inspur.cloud.entity.Title;
@@ -23,7 +26,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ApplicationFragment extends Fragment implements FWDiscussAdapter.InnerItemOnclickListener {
+public class ApplicationFragment extends Fragment implements FWDiscussAdapter.InnerItemOnclickListener, View.OnClickListener {
 
     private Title title;
     private ImageView search;
@@ -47,8 +50,16 @@ public class ApplicationFragment extends Fragment implements FWDiscussAdapter.In
         title.setTitleText("应用");
         title.setBtnRight1(R.drawable.add);
         title.setBtnRight2(R.drawable.app_before);
+        title.setBtnRight2OnclickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AppListActivity.class);
+                startActivity(intent);
+            }
+        });
         initData();
 
+        search.setOnClickListener(this);
         return view;
     }
 
@@ -63,7 +74,7 @@ public class ApplicationFragment extends Fragment implements FWDiscussAdapter.In
         titleName = new ArrayList<>();
 
         if (!flag[0]) {
-            titleName.add("常用应用▼");
+            titleName.add("常用应用 ▾");
             HashMap<Integer, Application> map1 = new HashMap<>();
             map1.put(0, new Application("集团新闻", R.drawable.app_1));
             map1.put(1, new Application("报销审批", R.drawable.app_2));
@@ -75,12 +86,12 @@ public class ApplicationFragment extends Fragment implements FWDiscussAdapter.In
             map1.put(7, new Application("研发审批", R.drawable.app_8));
             mlist.add(map1);
         } else {
-            titleName.add("常用应用▶");
+            titleName.add("常用应用 ▸");
             mlist.add(new HashMap<Integer, Application>());
         }
 
         if (!flag[1]) {
-            titleName.add("集团办公▼");
+            titleName.add("集团办公 ▾");
             HashMap<Integer, Application> map2 = new HashMap<>();
             map2.put(0, new Application("集团新闻", R.drawable.app_3));
             map2.put(1, new Application("研发审批", R.drawable.app_7));
@@ -88,24 +99,24 @@ public class ApplicationFragment extends Fragment implements FWDiscussAdapter.In
             map2.put(3, new Application("报销审批", R.drawable.app_2));
             mlist.add(map2);
         } else {
-            titleName.add("集团办公▶");
+            titleName.add("集团办公 ▸");
             mlist.add(new HashMap<Integer, Application>());
         }
 
         if (!flag[2]) {
-            titleName.add("集团本部部门▼");
+            titleName.add("集团本部部门 ▾");
             HashMap<Integer, Application> map3 = new HashMap<>();
             map3.put(0, new Application("云盘", R.drawable.app_3));
             map3.put(1, new Application("挪车", R.drawable.app_2));
             map3.put(2, new Application("集团新闻", R.drawable.app_5));
             mlist.add(map3);
         } else {
-            titleName.add("集团本部部门▶");
+            titleName.add("集团本部部门 ▸");
             mlist.add(new HashMap<Integer, Application>());
         }
 
         if (!flag[3]) {
-            titleName.add("差旅服务▼");
+            titleName.add("差旅服务 ▾");
             HashMap<Integer, Application> map4 = new HashMap<>();
             map4.put(0, new Application("集团新闻", R.drawable.app_1));
             map4.put(1, new Application("报销审批", R.drawable.app_2));
@@ -116,7 +127,7 @@ public class ApplicationFragment extends Fragment implements FWDiscussAdapter.In
             map4.put(6, new Application("日志审核", R.drawable.app_7));
             mlist.add(map4);
         } else {
-            titleName.add("差旅服务▶");
+            titleName.add("差旅服务 ▸");
             mlist.add(new HashMap<Integer, Application>());
         }
 
@@ -136,6 +147,16 @@ public class ApplicationFragment extends Fragment implements FWDiscussAdapter.In
                 initData();
                 break;
             default:
+                break;
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.search:
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
+                startActivity(intent);
                 break;
         }
     }
